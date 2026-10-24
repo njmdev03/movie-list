@@ -35,7 +35,7 @@ CREATE TABLE
     IF NOT EXISTS lists (
         id uuid PRIMARY KEY DEFAULT gen_random_uuid (),
 
-        owner uuid NOT NULL REFERENCES users (id),
+        owner_id uuid NOT NULL REFERENCES users (id),
         created_at timestamptz NOT NULL DEFAULT now (),
 
         name text NOT NULL,
